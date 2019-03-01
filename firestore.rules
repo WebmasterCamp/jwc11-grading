@@ -8,7 +8,23 @@ service cloud.firestore {
     }
 
     match /staffs/{staff} {
-      allow read, update, delete: if request.auth.uid == staff;
+      allow read, update:
+      	if request.auth.uid == staff ||
+        	get(/databases/$(database)/documents/staffs/$(request.auth.uid)).data.role == "admin";
+    }
+
+    match /grading/{grade} {
+      allow create, read, update:
+      	if exists(/databases/$(database)/documents/staffs/$(request.auth.uid));
+    }
+
+    match /karma/{record} {
+    	allow read: if true;
+      allow update: if request.auth.uid != null;
+    }
+
+  	match /star/{star} {
+    	allow create, read, update: if request.auth.uid != null;
     }
 
     match /stats/{stat} {

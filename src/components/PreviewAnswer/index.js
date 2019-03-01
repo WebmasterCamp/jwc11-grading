@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'react-emotion'
 
-import WebPreview from './WebPreview'
+// import WebPreview from './WebPreview'
 import ImagePreview from './ImagePreview'
 
 const Answer = styled.p`
@@ -17,9 +17,9 @@ const Answer = styled.p`
   word-wrap: break-word;
 `
 
-const Code = styled.code`
-  white-space: pre-wrap;
-`
+// const Code = styled.code`
+//   white-space: pre-wrap;
+// `
 
 const coreFields = ['generalAnswer1', 'generalAnswer2', 'generalAnswer3']
 const majorFields = ['majorAnswer1', 'majorAnswer2', 'majorAnswer3']
@@ -37,14 +37,14 @@ function getAnswer(data, role, index) {
 const PreviewAnswer = ({data, role, index}) => {
   const answer = getAnswer(data, role, index)
 
-  if (role === 'programming' && index === 2) {
-    return (
-      <div>
-        <WebPreview src={answer} />
-        <Code>{answer}</Code>
-      </div>
-    )
-  }
+  // if (role === 'programming' && index === 2) {
+  //   return (
+  //     <div>
+  //       <WebPreview src={answer} />
+  //       <Code>{answer}</Code>
+  //     </div>
+  //   )
+  // }
 
   if (role === 'design' && index === 2) {
     return <ImagePreview id={data.id} />
