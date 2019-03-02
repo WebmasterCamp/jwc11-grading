@@ -14,10 +14,10 @@ export const scoringRatio = {
 // Maximum scores for each type of questions
 export const maxScores = {
   core: [10, 15, 15],
-  design: [30, 20, 25],
-  content: [80, 70],
+  design: [30, 20, 25, 25],
+  content: [80, 70, 30],
   marketing: [10, 25, 25],
-  programming: [10, 10, 10],
+  programming: [10, 10, 10, 30],
 }
 
 // Average the scores given by every graders
