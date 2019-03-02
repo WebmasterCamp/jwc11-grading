@@ -15,7 +15,7 @@ export const scoringRatio = {
 // Maximum scores for each type of questions
 export const maxScores = {
   core: [15, 25, 15],
-  design: [20, 20, 20, 0],
+  design: [20, 20, 20],
   content: [15, 35, 25],
   marketing: [30, 30, 20],
   programming: [10, 10, 10, 30],

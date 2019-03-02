@@ -46,8 +46,13 @@ const PreviewAnswer = ({data, role, index}) => {
   //   )
   // }
 
-  if (role === 'design' && index === 3) {
-    return <ImagePreview id={data.id} />
+  if (role === 'design' && index === 2) {
+    return (
+      <div>
+        <Answer>{answer}</Answer>
+        <ImagePreview id={data.id} />
+      </div>
+    )
   }
 
   // if (role === 'content' && index === 1) {
