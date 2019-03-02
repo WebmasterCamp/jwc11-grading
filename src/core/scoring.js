@@ -5,18 +5,19 @@ const average = list => R.sum(list) / list.length
 
 // Scoring ratio used for normalizing the score for each majors
 export const scoringRatio = {
-  design: 0.8,
-  content: 0.4,
-  marketing: 1.0,
-  programming: 2.0,
+  core: 1.090909090909,
+  design: 0.66666666666666,
+  content: 0.5333333333333,
+  marketing: 0.5,
+  programming: 0.66666666666666,
 }
 
 // Maximum scores for each type of questions
 export const maxScores = {
-  core: [10, 15, 15],
-  design: [30, 20, 25, 25],
-  content: [80, 70, 30],
-  marketing: [10, 25, 25],
+  core: [15, 25, 15],
+  design: [20, 20, 20, 0],
+  content: [15, 35, 25],
+  marketing: [30, 30, 20],
   programming: [10, 10, 10, 30],
 }
 
@@ -37,11 +38,13 @@ export function computeScores(evaluations, major) {
 
   if (evaluations) {
     // First, we average the scores for core questions
-    const coreScore = averageScore(evaluations.core)
+    let coreScore = averageScore(evaluations.core)
 
     // Next, we average the scores for major questions
     let majorScore = averageScore(evaluations.major)
     let extraScore = 0
+
+    coreScore = coreScore * scoringRatio['core']
 
     // Then, we normalize the major score to 60
     majorScore = majorScore * ratio
