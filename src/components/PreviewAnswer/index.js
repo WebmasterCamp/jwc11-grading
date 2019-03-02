@@ -46,21 +46,21 @@ const PreviewAnswer = ({data, role, index}) => {
   //   )
   // }
 
-  if (role === 'design' && index === 2) {
+  if (role === 'design' && index === 3) {
     return <ImagePreview id={data.id} />
   }
 
-  if (role === 'content' && index === 1) {
-    return (
-      <div>
-        <Answer>{data.majorAnswer2}</Answer>
+  // if (role === 'content' && index === 1) {
+  //   return (
+  //     <div>
+  //       <Answer>{data.majorAnswer2}</Answer>
 
-        {data.majorAnswer3 && (
-          <Answer style={{marginTop: '0.8em'}}>{data.majorAnswer3}</Answer>
-        )}
-      </div>
-    )
-  }
+  //       {data.majorAnswer3 && (
+  //         <Answer style={{marginTop: '0.8em'}}>{data.majorAnswer3}</Answer>
+  //       )}
+  //     </div>
+  //   )
+  // }
 
   return <Answer>{answer}</Answer>
 }
