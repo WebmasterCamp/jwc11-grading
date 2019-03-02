@@ -24,11 +24,11 @@ const fields = {
     render: num => num && num.toFixed(2),
   },
   coreScore: {
-    title: 'คะแนนกลาง 40',
+    title: 'คะแนนกลาง 60',
     render: num => num && num.toFixed(2),
   },
   majorScore: {
-    title: 'คะแนนสาขา 60',
+    title: 'คะแนนสาขา 40',
     render: num => num && num.toFixed(2),
   },
   status: {
