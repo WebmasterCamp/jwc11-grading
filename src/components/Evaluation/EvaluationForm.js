@@ -29,8 +29,6 @@ function isIgnored(role, index) {
 const EvaluationForm = ({handleSubmit, delist, data, role, disabled}) => (
   <form onSubmit={handleSubmit}>
     {getQuestions(role).map((item, index) => {
-      if (isIgnored(role, index)) return null
-
       return (
         <Card key={index}>
           <Question>
