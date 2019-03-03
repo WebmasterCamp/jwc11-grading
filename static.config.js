@@ -19,6 +19,7 @@ class Document extends Component {
             href="https://fonts.googleapis.com/css?family=Kanit:300,400|Taviraj"
             rel="stylesheet"
           />
+          <title>JWC 11 Grading</title>
         </Head>
         <Body>{children}</Body>
       </Html>
