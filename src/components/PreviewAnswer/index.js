@@ -37,14 +37,14 @@ function getAnswer(data, role, index) {
 const PreviewAnswer = ({data, role, index}) => {
   const answer = getAnswer(data, role, index)
 
-  // if (role === 'programming' && index === 2) {
-  //   return (
-  //     <div>
-  //       <WebPreview src={answer} />
-  //       <Code>{answer}</Code>
-  //     </div>
-  //   )
-  // }
+  if (role === 'programming' && index === 2) {
+    return (
+      <div>
+        <Answer>3.1 {answer}</Answer>
+        <Answer>3.2 {data.majorAnswer4}</Answer>
+      </div>
+    )
+  }
 
   if (role === 'design' && index === 2) {
     return (
