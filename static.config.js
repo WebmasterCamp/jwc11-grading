@@ -31,7 +31,7 @@ export default {
   webpack,
   siteRoot,
   getSiteProps: () => ({
-    title: 'JWCx Grading',
+    title: 'JWC11 Grading',
     siteRoot,
   }),
   getRoutes: async () => [
