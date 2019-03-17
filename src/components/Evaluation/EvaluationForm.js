@@ -72,14 +72,6 @@ const EvaluationForm = ({handleSubmit, delist, data, role, disabled}) => (
 )
 
 function allowExtra(role, index) {
-  if (role === 'marketing') {
-    return true
-  }
-
-  if (role === 'programming' && index === 2) {
-    return true
-  }
-
   return false
 }
 
