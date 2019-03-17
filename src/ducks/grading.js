@@ -43,6 +43,22 @@ export const storeStaffs = Creator(STORE_STAFFS)
 
 const db = app.firestore()
 
+function findNextGradingIndex(entries, index) {
+  const entry = entries[index + 1]
+
+  if (entry) {
+    if (entry.delisted) return findNextGradingIndex(entries, index + 2)
+
+    return entry
+  }
+
+  return null
+
+  // if (index + 1 > entries.length) return null
+
+  // if (!entry) return findNextGradingIndex(entries, index + 1)
+}
+
 // Proceed to the next submission entry
 export function* proceedSaga(id) {
   const entries = yield select(submissionsSelector)
@@ -52,7 +68,7 @@ export function* proceedSaga(id) {
 
   // If index of the next entry is found, navigate to that entry
   if (Number.isInteger(index)) {
-    const entry = entries[index + 1]
+    const entry = findNextGradingIndex(entries, index)
 
     if (entry) {
       yield call(history.push, `/grade/${entry.id}`)
