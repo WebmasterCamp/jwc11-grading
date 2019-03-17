@@ -66,8 +66,7 @@ const CandidatePreview = ({data, choose}) => {
     return (
       <div>
         <Heading>
-          อายุ: {data.age} | ระดับชั้น: {grades[data.class]} | เพศ:{' '}
-          {genders[data.gender]} | สาขา: {data.major}
+          ระดับชั้น: {grades[data.class]} | สาขา: {data.major}
         </Heading>
 
         <ButtonGroup size="large" style={{marginBottom: '2em'}}>

@@ -60,16 +60,6 @@ const EvaluationForm = ({handleSubmit, delist, data, role, disabled}) => (
         <Button htmlType="submit" size="large" type="primary" style={posStyle}>
           ยืนยันการให้คะแนน <Icon type="right" />
         </Button>
-
-        <Popconfirm
-          title="คุณต้องการคัดผู้สมัครดังกล่าวออกหรือไม่"
-          onConfirm={delist}
-          okText="คัดออก"
-          cancelText="ยกเลิก">
-          <Button size="large" type="danger">
-            คัดออก <Icon type="trash" />
-          </Button>
-        </Popconfirm>
       </div>
     )}
 

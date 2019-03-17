@@ -45,9 +45,8 @@ const Grading = ({data, role, delist, delistedBy, submit, initial}) => {
         </Heading>
 
         <SubHeading>
-          {role === 'core' && <span> สาขา: {data.major} | </span>}
-          อายุ: {data.age} | ระดับชั้น: {grades[data.class]} | เพศ:{' '}
-          {genders[data.gender]}
+          {role === 'core' && <span> สาขา: {data.major} | </span>} ระดับชั้น:{' '}
+          {grades[data.class]}
         </SubHeading>
 
         <Form

@@ -18,7 +18,7 @@ export const maxScores = {
   design: [20, 20, 20],
   content: [15, 35, 25],
   marketing: [30, 30, 20],
-  programming: [20, 20, 20],
+  programming: [15, 15, 30],
 }
 
 // Average the scores given by every graders
