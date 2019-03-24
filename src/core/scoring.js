@@ -5,11 +5,11 @@ const average = list => R.sum(list) / list.length
 
 // Scoring ratio used for normalizing the score for each majors
 export const scoringRatio = {
-  core: 1.090909090909,
-  design: 0.66666666666666,
-  content: 0.5333333333333,
-  marketing: 0.5,
-  programming: 0.66666666666666,
+  core: 0.9090909091,
+  design: 0.9090909091,
+  content: 0.6666666667,
+  marketing: 0.625,
+  programming: 0.8333333333,
 }
 
 // Maximum scores for each type of questions
